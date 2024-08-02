@@ -1,0 +1,22 @@
+[build-system]
+requires = ["hatchling", "hatch-vcs"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["test1"]
+
+[project]
+name = "test1"
+version = "0.1.0"
+authors = [{name = "Your Name", email = "your.email@example.com"}]
+
+[tool.pixi.project]
+channels = ["conda-forge"]
+platforms = ["linux-64"]
+
+[tool.pixi.pypi-dependencies]
+test2 = { path = "../test2", editable = true }
+
+[tool.pixi.tasks]
+tests = "python test1/test1.py"
+
