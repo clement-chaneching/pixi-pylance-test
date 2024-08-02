@@ -24,5 +24,5 @@ In VSCode, when exploring test1/test1/test1.py you shouldnt be able to navigate 
 ## Remarks
 
 As mentioned in the open bug : 
-- it works with test2 is not "editable"
+- It works with test2 when not "editable"
 - Adding pip, running pixi shell and trying to use `pip install -e ../test2` doest not solve this issue 
